@@ -27,7 +27,7 @@ require('lazy').setup({
 	},
 	install = { colorscheme = { 'tokyonight' } },
 	dev = {
-		path = 'E:/lua/nvim',
+		path = vim.fn.has('win32') ~= 0 and 'E:/lua/nvim-dev' or '~/nvim-dev',
 	},
 	ui = {
 		border = vim.o.winborder,
