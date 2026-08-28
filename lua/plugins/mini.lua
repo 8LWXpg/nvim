@@ -21,4 +21,10 @@ return {
 			view = { dim = true },
 		},
 	},
+	{
+		'nvim-mini/mini.diff',
+		version = '*',
+		event = { 'BufReadPost', 'BufNewFile' },
+		opts = {},
+	},
 }
