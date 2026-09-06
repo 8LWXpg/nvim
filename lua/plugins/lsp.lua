@@ -115,18 +115,13 @@ return {
 					return {
 						snippets = {
 							require('mini.snippets').gen_loader.from_lang({
-								lang_patterns = {
-									ps1 = { 'PowerShell.json' },
-								},
+								lang_patterns = { ps1 = { 'PowerShell.json' } },
 							}),
 						},
-						mappings = {
-							expand = '',
-						},
+						mappings = { expand = '' },
 					}
 				end,
 			},
-			'pxwg/blink-cmp-copilot-chat',
 		},
 		---@type blink.cmp.Config
 		opts = {
@@ -144,16 +139,7 @@ return {
 			},
 			sources = {
 				default = { 'snippets', 'lsp', 'path', 'buffer' },
-				per_filetype = {
-					['copilot-chat'] = { 'copilot_c' },
-				},
-				providers = {
-					lsp = { min_keyword_length = 0 },
-					copilot_c = {
-						name = 'CopilotChat',
-						module = 'blink-cmp-copilot-chat',
-					},
-				},
+				providers = { lsp = { min_keyword_length = 0 } },
 			},
 		},
 	},
